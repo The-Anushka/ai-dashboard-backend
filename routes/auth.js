@@ -59,4 +59,5 @@ const requireAuth = (req, res, next) => {
   }
 };
 
-module.exports = { router, requireAuth };
+const { router: authRoutes } = require("./routes/auth");
+app.use("/api/auth", authRoutes)
