@@ -49,7 +49,7 @@ router.post("/", requireAuth, upload.single("file"), async (req, res) => {
 
     // Call Python API
     const axios = require("axios");
-    const summaryRes = await axios.post("http://localhost:7000/api/summarize", {
+    const summaryRes = await axios.post("https://ml-summarizer-1hr4.onrender.com", {
       text: data.text,
     });
 
